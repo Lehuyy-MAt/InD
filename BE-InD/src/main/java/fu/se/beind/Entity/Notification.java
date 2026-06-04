@@ -23,7 +23,7 @@ public class Notification {
 
     @ManyToOne
     @JoinColumn(name = "UserId")
-    private AppUser appUser;
+    private User user;
 
     private String title;
 

@@ -24,7 +24,7 @@ public class Design {
 
     @ManyToOne
     @JoinColumn(name = "UserId")
-    private AppUser appUser;
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "ProductId")

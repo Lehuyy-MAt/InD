@@ -24,7 +24,7 @@ public class Cart {
 
     @OneToOne
     @JoinColumn(name = "UserId")
-    private AppUser appUser;
+    private User user;
 
     private LocalDateTime createdAt;
 

@@ -29,5 +29,5 @@ public class Role {
     private Boolean isActive;
 
     @OneToMany(mappedBy = "role")
-    private List<AppUser> appUsers = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
 }
