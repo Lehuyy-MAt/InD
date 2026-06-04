@@ -20,40 +20,30 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id")
     private Integer id;
 
-    @Column(name = "FullName")
     private String fullName;
 
-    @Column(name = "Email", unique = true)
+    @Column(unique = true)
     private String email;
 
-    @Column(name = "PasswordHash")
     private String passwordHash;
 
-    @Column(name = "PhoneNumber")
     private String phoneNumber;
 
-    @Column(name = "Address")
     private String address;
 
-    @Column(name = "AvatarUrl")
     private String avatarUrl;
 
-    @Column(name = "IsActive")
     private Boolean isActive;
 
-    @Column(name = "CreatedAt")
     private LocalDateTime createdAt;
 
-    @Column(name = "UpdatedAt")
     private LocalDateTime updatedAt;
 
     @ManyToOne
     @JoinColumn(name = "RoleId")
     private Role role;
-
     @OneToMany(mappedBy = "user")
     private List<Order> orders = new ArrayList<>();
 

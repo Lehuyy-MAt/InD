@@ -61,6 +61,7 @@ public class Order {
 
     private LocalDateTime deliveredAt;
 
+
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
 }
