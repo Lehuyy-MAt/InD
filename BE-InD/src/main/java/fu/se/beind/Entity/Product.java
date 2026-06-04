@@ -48,7 +48,9 @@ public class Product {
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
-
+    // Thêm danh sách ảnh liên kết (Một sản phẩm có nhiều ảnh)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<ProductImage> images; // Nhớ kiểm tra xem class của bạn tên là ProductImage hay Img để đặt kiểu dữ liệu cho đúng!
 
     @OneToMany(mappedBy = "product")
     private List<Review> reviews = new ArrayList<>();
