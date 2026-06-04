@@ -1,0 +1,39 @@
+package fu.se.beind.Entity;
+
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "Notifications")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Notification {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @ManyToOne
+    @JoinColumn(name = "UserId")
+    private AppUser appUser;
+
+    private String title;
+
+    private String message;
+
+    private String type;
+
+    private String link;
+
+    private Boolean isRead;
+
+    private LocalDateTime createdAt;
+}
