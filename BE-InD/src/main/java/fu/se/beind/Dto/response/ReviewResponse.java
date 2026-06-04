@@ -15,7 +15,7 @@ public class ReviewResponse {
     private Integer productId;
     private String productName;
     private Integer orderId;
-    private Integer rating;
+    private Byte rating;
     private String title;
     private String comment;
     private String imageUrls; // JSON array string
